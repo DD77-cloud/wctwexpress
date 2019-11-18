@@ -1,7 +1,8 @@
 const router = require('express').Router()
 module.exports = router
 
-router.use('/users', require('./users'))
+router.use('/strava', require('./strava'))
+router.use('/weathergov', require('./weathergov'))
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')
